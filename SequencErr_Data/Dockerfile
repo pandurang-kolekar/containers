@@ -63,7 +63,7 @@ RUN apt-get update \
 	&& tar -xvf v1.0.tar.gz && rm v1.0.tar.gz \
 	&& cd SequencErr-1.0/ \
 	&& unzip \*.zip && rm *.zip && rm -r __MACOSX/ \
-	&& cd /
+	&& cd / \
 	&& chown rstudio:rstudio /home/rstudio \
 	&& addgroup rstudio staff \
   ## Prevent rstudio from deciding to use /usr/bin/R if a user apt-get installs a package
