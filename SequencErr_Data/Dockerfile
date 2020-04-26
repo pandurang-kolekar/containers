@@ -94,14 +94,14 @@ RUN apt-get update \
 
 RUN cd /etc/cont-init.d/ \
   && wget https://github.com/rocker-org/rocker-versioned/blob/master/rstudio/userconf.sh \
-  && mv userconf.sh userconf \
+  && mv userconf.sh userconf && chmod 777 userconf \
   && wget https://github.com/rocker-org/rocker-versioned/blob/master/rstudio/add_shiny.sh \
-  && mv add_shiny.sh add \
+  && mv add_shiny.sh add && chmod 777 add \
   && cd /etc/rstudio/ \
   && wget https://github.com/rocker-org/rocker-versioned/blob/master/rstudio/disable_auth_rserver.conf \
   && cd /usr/lib/rstudio-server/bin/ \
   && wget https://github.com/rocker-org/rocker-versioned/blob/master/rstudio/pam-helper.sh \
-  && mv pam-helper.sh pam-helper \
+  && mv pam-helper.sh pam-helper && chmod 777 pam-helper \
   && cd /
 
 EXPOSE 8787
