@@ -15,7 +15,7 @@ LABEL about.tags="NGS BAM sequencing errors"
 MAINTAINER Pandurang Kolekar <pandurang.kolekar@gmail.com>
 
 ################## INSTALLATION ###########################
-RUN cd /home/rstudio/kitematic && \
+RUN cd /home/rstudio && \
     wget https://github.com/XMaLab/SequencErr/archive/v1.0.tar.gz && \
 	tar -xvf v1.0.tar.gz && rm v1.0.tar.gz && \
 	cd SequencErr-1.0/ && \
@@ -25,8 +25,8 @@ RUN R -e "install.packages(c('beeswarm', 'ggpubr', 'pheatmap', 'RColorBrewer'), 
 
 EXPOSE 8787
 
-WORKDIR /home/rstudio/kitematic/SequencErr-1.0
+WORKDIR /home/rstudio/SequencErr-1.0
 
-VOLUME /home/rstudio/kitematic/SequencErr-1.0
+VOLUME /home/rstudio/SequencErr-1.0
 
 CMD ["/init"]
