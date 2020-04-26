@@ -18,7 +18,7 @@ MAINTAINER Pandurang Kolekar <pandurang.kolekar@gmail.com>
 RUN wget https://github.com/XMaLab/SequencErr/archive/v1.0.tar.gz && \
 	tar -xvf v1.0.tar.gz && rm v1.0.tar.gz && \
 	cd SequencErr-1.0/ && \
-	unzip \*.zip && rm *.zip
+	unzip \*.zip && rm *.zip && rm -r __MACOSX/
 
 RUN R -e "install.packages(c('beeswarm', 'ggpubr', 'pheatmap', 'RColorBrewer'), repos = 'http://cran.us.r-project.org', dependencies = TRUE)"
 
