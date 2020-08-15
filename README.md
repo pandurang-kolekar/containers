@@ -15,5 +15,13 @@ docker run --entrypoint cutadapt -v <path to data folder>:/data pskolekar/cutada
 [bam-readcount documentation](https://github.com/genome/bam-readcount)
 
 ```
-docker run -v <path to data folder>:/data pskolekar/bam-readcount:latest bam-readcount -f <ref.fa> <some.bam>
+docker run -it -v <path to data folder>:/data pskolekar/bam-readcount:latest bam-readcount -f <ref.fa> <some.bam>
+```
+
+## 3. FastQC
+
+[FastQC documentation](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+
+```
+ docker run -it pskolekar/fastqc:latest fastqc --help  
 ```
