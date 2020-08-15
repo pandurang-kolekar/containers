@@ -20,8 +20,9 @@ RUN apt-get update \
 RUN git clone https://github.com/genome/bam-readcount.git \
   && cd bam-readcount/ \
   && cmake ./ && make
-ENV PATH="/bam-readcount/bin:${PATH}"
+
+RUN chmod a+x /bam-readcount/bin/bam-readcount
 
 WORKDIR /bam-readcount/bin
 
-ENTRYPOINT ["/bin/bash"]
+ENV PATH="/bam-readcount/bin:${PATH}"
