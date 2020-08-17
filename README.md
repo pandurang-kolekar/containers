@@ -25,3 +25,12 @@ docker run -it -v <path to data folder>:/data pskolekar/bam-readcount:latest bam
 ```
  docker run -it pskolekar/fastqc:latest fastqc --help  
 ```
+
+## 4. BSMAP
+
+[BSMAP documentation](https://code.google.com/archive/p/bsmap/)
+
+```
+ docker run -it pskolekar/bsmap:latest bsmap -h
+ docker run -it pskolekar/bsmap:latest methratio.py -h
+```
