@@ -34,3 +34,12 @@ docker run -it -v <path to data folder>:/data pskolekar/bam-readcount:latest bam
  docker run -it pskolekar/bsmap:latest bsmap -h
  docker run -it pskolekar/bsmap:latest methratio.py -h
 ```
+
+## 5. samtools
+
+[Samtools documentation](http://www.htslib.org/doc/samtools.html)
+
+```
+ docker run -it pskolekar/samtools:latest samtools
+ 
+```
