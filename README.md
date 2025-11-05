@@ -46,3 +46,4 @@ docker run -it -v <path to data folder>:/data pskolekar/bam-readcount:latest bam
 
 # Contact details
 - Pandurang Kolekar (pandurang.kolekar@gmail.com)
+	-  GitHub issue
