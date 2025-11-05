@@ -43,3 +43,5 @@ docker run -it -v <path to data folder>:/data pskolekar/bam-readcount:latest bam
  docker run -it pskolekar/samtools:latest samtools
  
 ```
+
+# Contact details
